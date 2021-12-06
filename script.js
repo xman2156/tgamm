@@ -1,6 +1,6 @@
 var oneDay = 24*60*60*1000;
 var latestRelease = new Date("2021-11-27T09:30:00-06:00"); // Newest Episode Release
-//var nextRelease = new Date("2021-08-14T10:00:00"); // Next Episode release
+//var nextRelease = new Date("2021-11-27T09:30:00-06:00"); // Next Episode release
 var mode = 0; //DD:HH:MM:SS mode is default
 var lastHiatusMention = null;
 	
@@ -18,7 +18,7 @@ function GetThen(yourUrl, onload){
 	
 //Initially loads the last 100 posts on subreddit
 function requestSubredditData(after = null) {
-	var url = 'https://www.reddit.com/r/TheOwlHouse/new.json?limit=100';
+	var url = 'https://www.reddit.com/r/GhostAndMollyMcGee/new.json?limit=100';
 	GetThen(after ? url + '&after=' + after : url, checkSubreddit);
 }
 		
