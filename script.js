@@ -112,7 +112,7 @@ function timer(updown, zeroTime, id){
 //The Grand Array of Hiatuses
 var hiatusList = [
 ['Last Episode','Next Episode','Preceding Release','Date Announced','Following Release','Days In The Dark','Days Waiting','Hiatus Length','Note'],
-['Festival of Lights/Saving Christmas','???','27 Nov 2021','???','???','???','???','???','']
+['Festival of Lights/Saving Christmas','???','Nov 27 2021','???','???','???','???','???','']
 ];
 	
 function hiatusRankCheck(){

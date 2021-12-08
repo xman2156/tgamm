@@ -1,5 +1,5 @@
 var youtube = document.getElementById("youtube");		
-var source = "https://img.youtube.com/vi/RQCn8hg-6zg/sddefault.jpg";
+var source = "thumbnail.webp";
 var image = new Image();
 
 image.src = source;
