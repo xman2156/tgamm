@@ -112,13 +112,13 @@ function timer(updown, zeroTime, id){
 //The Grand Array of Hiatuses
 var hiatusList = [
 ['Last Episode','Next Episode','Preceding Release','Date Announced','Following Release','Days In The Dark','Days Waiting','Hiatus Length','Note'],
-['Festival of Lights/Saving Christmas','???','Nov 27 2021','???','???','???','???','???','']
+['Festival of Lights/Saving Christmas','???','Nov 27 2021','???','???','','???','','']
 ];
 	
 function hiatusRankCheck(){
 	var diffDays = timer("up", latestRelease, "count");
   var hiatusRank = 0;
-  var nextHiatusLength = hiatusList[2][7]; //reference to the longest hiatus
+  var nextHiatusLength = hiatusList[1][7]; //reference to the longest hiatus
   for(var i = 1; i < hiatusList.length; i++){
   	if(hiatusList[i][7] > diffDays){
 			hiatusRank += 1;
@@ -174,7 +174,7 @@ function createTable(array) {
 //does the ticking
 window.setInterval(function(){
 	timer("up", latestRelease, "count");
-	timer("down", hiatusRankCheck(), "count2");
+	//timer("down", hiatusRankCheck(), "count2");
 	timer("up", lastHiatusMention, "count3");
 	timer("down", nextRelease, "count4");
 }, 250);
