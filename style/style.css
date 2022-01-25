@@ -98,7 +98,7 @@ body {
   border: 1px solid #888;
   width: 80%;
   font-size: 20px;
-  color: #3cd8ff;
+  color: #FFDE00;
 }
 
 .close {
@@ -137,11 +137,11 @@ body {
 }
 
 .topnav a:hover {
-  border-bottom: 3px solid #3cd8ff;
+  border-bottom: 3px solid #FFDE00;
 }
 
 .topnav a.active {
-  border-bottom: 3px solid #3cd8ff;
+  border-bottom: 3px solid #FFDE00;
 }
 
 .count {
@@ -160,7 +160,7 @@ body {
 
 hr {
 	border: none;
-	background-color: #3cd8ff;
+	background-color: #FFDE00;
 	height: 5px;
 	width: 80%;
 }
@@ -183,7 +183,7 @@ table {
 td {
 	padding: 3px;
 	text-align: center;
-	border: 3px solid #3cd8ff;
+	border: 3px solid #FFDE00;
 	padding: 4px;
 	background-color: rgba(0,0,0,0.6);
 }
