@@ -6,30 +6,30 @@ var body = document.body.style;
 var i;
 
 function dim() {
-  //body.background = "linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('background.webp')"; Add when background image selected
+  body.background = "linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/background.webp')";
   body.backgroundColor = "#4d4c48";
   body.backgroundSize = "cover";
   body.backgroundRepeat = "no-repeat";
   body.backgroundPosition = "center";
   body.backgroundAttachment = "fixed";
   body.overflow = "hidden";
-  body.color = "#006680";
+  body.color = "#a69000";
   for (i=0; i < spacer.length; i++) {
-    spacer[i].style.background = "#006680";
+    spacer[i].style.background = "#a69000";
   }
 }
 
 function bright() {
-  body.background = "url('background.webp')";
+  body.background = "url('images/background.webp')";
   body.backgroundColor = "#4d4c48";
   body.backgroundSize = "cover";
   body.backgroundRepeat = "no-repeat";
   body.backgroundPosition = "center";
   body.backgroundAttachment = "fixed";
   body.overflow = "visible";
-  body.color = "#3cd8ff";
+  body.color = "#FFDE00";
   for (i=0; i < spacer.length; i++) {
-    spacer[i].style.background = "#3cd8ff";
+    spacer[i].style.background = "#FFDE00";
   }
 }
 
