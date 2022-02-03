@@ -1,6 +1,6 @@
 var oneDay = 24*60*60*1000;
-var latestRelease = new Date("2022-02-12T09:30:00-06:00"); // Newest Episode Release
-var nextRelease = new Date("2022-02-19T09:30:00-06:00"); // Next Episode release
+var latestRelease = new Date("2022-02-12T08:30:00-06:00"); // Newest Episode Release
+var nextRelease = new Date("2022-02-19T08:30:00-06:00"); // Next Episode release
 var mode = 0; //DD:HH:MM:SS mode is default
 var lastHiatusMention = null;
 	
@@ -118,12 +118,12 @@ var hiatusList = [
 function hiatusRankCheck(){
 	var diffDays = timer("up", latestRelease, "count");
   var hiatusRank = 0;
-  var nextHiatusLength = hiatusList[1][5]; //reference to the longest hiatus
+  var nextHiatusLength = hiatusList[1][4]; //reference to the longest hiatus
   for(var i = 1; i < hiatusList.length; i++){
-  	if(hiatusList[i][5] > diffDays){
+  	if(hiatusList[i][4] > diffDays){
 			hiatusRank += 1;
-			if(hiatusList[i][5] < nextHiatusLength){
-      	nextHiatusLength = hiatusList[i][5];
+			if(hiatusList[i][4] < nextHiatusLength){
+      	nextHiatusLength = hiatusList[i][4];
       }
 		}
 	}
@@ -172,7 +172,7 @@ function createTable(array) {
 //does the ticking
 window.setInterval(function(){
 	timer("up", latestRelease, "count");
-	//timer("down", hiatusRankCheck(), "count2");
+	//timer("down", hiatusRankCheck(), "count2"); //comment out when not on hiatus
 	timer("up", lastHiatusMention, "count3");
 	timer("down", nextRelease, "count4"); //Comment out when no new release date
 }, 250);

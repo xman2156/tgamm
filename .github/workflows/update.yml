@@ -18,13 +18,13 @@ jobs:
       - name: rename updated script
         run: mv javascripts/updatescript.js javascripts/script.js
         
-      - name: Commit files # commit the output folder
+      - name: Commit files
         run: |
           git config --local user.email "xman2156@gmail.com"
           git config --local user.name "xman2156"
           git add .
           git commit -m "Update for new epsiode"
-      - name: Push changes # push the output folder to your repo
+      - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
