@@ -1,6 +1,6 @@
 var oneDay = 24*60*60*1000;
-var latestRelease = new Date("2021-11-27T08:30:00-06:00"); // Newest Episode Release
-var nextRelease = new Date("2022-02-12T08:30:00-06:00"); // Next Episode release
+var latestRelease = new Date("2022-02-12T08:30:00-06:00"); // Newest Episode Release
+var nextRelease = new Date("2022-02-19T08:30:00-06:00"); // Next Episode release
 var mode = 0; //DD:HH:MM:SS mode is default
 var lastHiatusMention = null;
 	
@@ -112,7 +112,7 @@ function timer(updown, zeroTime, id){
 //The Grand Array of Hiatuses
 var hiatusList = [
 ['Last Episode','Next Episode','Preceding Release','Following Release','Hiatus Length','Note'],
-['Festival of Lights; Saving Christmas','Ice Princess; Ready, Set, Snow','Nov 27 2021','Feb 12 2022',8,'']
+['Festival of Lights; Saving Christmas','Ice Princess; Ready, Set, Snow','Nov 27 2021','Feb 12 2022',97,'']
 ];
 	
 function hiatusRankCheck(){
@@ -155,7 +155,7 @@ function hiatusRankCheck(){
 //makes an HTML table from the array
 function createTable(array) {
 	var diffDays = timer("up", latestRelease, "count");
-	array[array.length - 1][4] = diffDays + " days and counting";
+	// array[array.length - 1][4] = diffDays + " days and counting"; //comment out if not on hiatus
 	for(var i = 0; i < array.length ; i++){
 		var row = document.createElement('tr');
 		row.setAttribute("id", "myTr" + i);
