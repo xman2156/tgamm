@@ -1,6 +1,6 @@
 var oneDay = 24*60*60*1000;
-var latestRelease = new Date("2022-03-05T08:30:00-06:00"); // Newest Episode Release
-var nextRelease = new Date("2022-03-12T08:30:00-06:00"); // Next Episode release
+var latestRelease = new Date("2022-03-12T08:30:00-06:00"); // Newest Episode Release
+//var nextRelease = new Date("2022-03-12T08:30:00-06:00"); // Next Episode release
 var mode = 0; //DD:HH:MM:SS mode is default
 var lastHiatusMention = null;
 	
@@ -112,7 +112,8 @@ function timer(updown, zeroTime, id){
 //The Grand Array of Hiatuses
 var hiatusList = [
 ['Last Episode','Next Episode','Preceding Release','Following Release','Hiatus Length','Note'],
-['Festival of Lights; Saving Christmas','Ice Princess; Ready, Set, Snow','Nov 27 2021','Feb 12 2022',97,'']
+['Festival of Lights; Saving Christmas','Ice Princess; Ready, Set, Snow','Nov 27 2021','Feb 12 2022',97,''],
+['Scare Tactics; The Bad Boy Bobby Daniels','???','Mar 12 2022','???',,'']
 ];
 	
 function hiatusRankCheck(){
@@ -155,7 +156,7 @@ function hiatusRankCheck(){
 //makes an HTML table from the array
 function createTable(array) {
 	var diffDays = timer("up", latestRelease, "count");
-	// array[array.length - 1][4] = diffDays + " days and counting"; //comment out if not on hiatus
+	array[array.length - 1][4] = diffDays + " days and counting"; //comment out if not on hiatus
 	for(var i = 0; i < array.length ; i++){
 		var row = document.createElement('tr');
 		row.setAttribute("id", "myTr" + i);
@@ -172,9 +173,9 @@ function createTable(array) {
 //does the ticking
 window.setInterval(function(){
 	timer("up", latestRelease, "count");
-	//timer("down", hiatusRankCheck(), "count2");
+	timer("down", hiatusRankCheck(), "count2");
 	timer("up", lastHiatusMention, "count3");
-	timer("down", nextRelease, "count4"); //Comment out when no new release date
+	//timer("down", nextRelease, "count4"); //Comment out when no new release date
 }, 250);
 	
 //every 30 seconds, the most recent 100 posts on the subreddit are loaded up again in case there has been a new post that mentions hiatus
