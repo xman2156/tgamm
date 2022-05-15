@@ -1,6 +1,6 @@
 //Automatic episode change
 var episodeList = [
-  ['scare Tactics; The Bad Boy Bobby Daniels', '???', new Date("2022-03-12T10:00:00-06:00"), ]
+  ['Scare Tactics; The Bad Boy Bobby Daniels', '???', new Date("2022-03-12T10:00:00-06:00"), ]
 ];
 var startDate = new Date("2022-03-26T10:00:00-06:00");
 var today = Date.now();
