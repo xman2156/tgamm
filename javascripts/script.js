@@ -123,7 +123,7 @@ function timer(updown, zeroTime, id){
 var hiatusList = [
 ['Last Episode','Next Episode','Preceding Release','Following Release','Hiatus Length','Note'],
 ['Festival of Lights; Saving Christmas','Ice Princess; Ready, Set, Snow','Nov 27 2021','Feb 12 2022',97,''],
-['Scare Tactics; The Bad Boy Bobby Daniels','???','Mar 12 2022','???',,'']
+['Scare Tactics; The Bad Boy Bobby Daniels','*Citizen McGee; The Internship*','Mar 12 2022','*Jun 11 2022*',,'*Sepculation* from The Cable Forum']
 ];
 	
 function hiatusRankCheck(){
