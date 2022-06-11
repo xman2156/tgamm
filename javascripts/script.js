@@ -1,6 +1,6 @@
 //Automatic episode change
 var episodeList = [
-  ['Scare Tactics; The Bad Boy Bobby Daniels', '???', new Date("2022-03-12T10:00:00-05:00")]
+  ['Scare Tactics; The Bad Boy Bobby Daniels', 'Citizen McGee; The Internship', new Date("2022-03-12T10:00:00-05:00"), new Date("2022-06-11T10:00:00-05:00")]
 ];
 var startDate = new Date("2022-03-26T10:00:00-05:00");
 var today = Date.now();
@@ -122,7 +122,7 @@ function timer(updown, zeroTime, id){
 var hiatusList = [
 ['Last Episode','Next Episode','Preceding Release','Following Release','Hiatus Length','Note'],
 ['Festival of Lights; Saving Christmas','Ice Princess; Ready, Set, Snow','Nov 27 2021','Feb 12 2022',97,''],
-['Scare Tactics; The Bad Boy Bobby Daniels','*Citizen McGee; The Internship*','Mar 12 2022','*Jun 11 2022*',,'*Sepculation* from The Cable Forum']
+['Scare Tactics; The Bad Boy Bobby Daniels','Citizen McGee; The Internship','Mar 12 2022','Jun 11 2022',,'']
 ];
 
 function hiatusRankCheck(){
