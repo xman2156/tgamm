@@ -124,10 +124,10 @@ function timer(updown, zeroTime, id){
 var hiatusList = [
 ['Last Episode','Next Episode','Preceding Release','Following Release','Hiatus Length','Note'],
 ['Festival of Lights; Saving Christmas','Ice Princess; Ready, Set, Snow','Nov 27 2021','Feb 12 2022',97,''],
-['Scare Tactics; The Bad Boy Bobby Daniels','Citizen McGee; The Internship','Mar 12 2022','Jun 11 2022',,'']
+['Scare Tactics; The Bad Boy Bobby Daniels','Citizen McGee; The Internship','Mar 12 2022','Jun 11 2022',91,'']
 ];
 
-function hiatusRankCheck(){
+/* function hiatusRankCheck(){
   var diffDays = timer("up", latestRelease, "count");
   var hiatusRank = 0;
   var nextHiatusLength = hiatusList[1][4]; //reference to the longest hiatus
@@ -162,12 +162,12 @@ function hiatusRankCheck(){
   document.getElementById("nextHiatusLength").innerHTML =  nextHiatusLength;
   var nextHiatusLengthDate = new Date(latestRelease.getTime() + (nextHiatusLength * 86400000));
   return nextHiatusLengthDate;
-}
+} */
 
 //makes an HTML table from the array
 function createTable(array) {
   var diffDays = timer("up", latestRelease, "count");
-  array[array.length - 1][4] = diffDays + " days and counting"; //comment out when not on hiatus
+  //array[array.length - 1][4] = diffDays + " days and counting"; //comment out when not on hiatus
   for(var i = 0; i < array.length ; i++){
     var row = document.createElement('tr');
     row.setAttribute("id", "myTr" + i);
