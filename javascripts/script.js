@@ -1,8 +1,10 @@
 //Automatic episode change
 var episodeList = [
-  ['Scare Tactics; The Bad Boy Bobby Daniels', 'Citizen McGee; The Internship', new Date("2022-03-12T10:00:00-05:00"), new Date("2022-06-11T10:00:00-05:00")]
+  ['The Lucky Penny; Lock, Stock, and Peril', 'Out of House and Home; Home is Where the Haunt Is', new Date("2022-06-18T10:00:00-05:00"), new Date("2022-06-25T10:00:00-05:00")],
+  ['Out of House and Home; Home is Where the Haunt Is', 'Scaring is Caring; All Night Plight', new Date("2022-06-25T10:00:00-05:00"), new Date("2022-07-02T10:00:00-05:00")],
+  ['Scaring is Caring; All Night Plight', 'The Jig is Up/Molly Vs. The Ghost World', new Date("2022-07-02T10:00:00-05:00"), new Date("2022-07-09T10:00:00-05:00")],
 ];
-var startDate = new Date("2022-03-26T10:00:00-05:00");
+var startDate = new Date("2022-06-18T10:00:00-05:00");
 var today = Date.now();
 var weeksPassed = 0; //Math.floor((today - Date.parse(startDate))/(24*3600*1000*7)); //comment out equation when on hiatus
 var latestRelease = episodeList[weeksPassed][2];
