@@ -1,8 +1,6 @@
 //Automatic episode change
 var episodeList = [
-  ['The Lucky Penny; Lock, Stock, and Peril', 'Out of House and Home; Home is Where the Haunt Is', new Date("2022-06-18T10:00:00-05:00"), new Date("2022-06-25T10:00:00-05:00")],
-  ['Out of House and Home; Home is Where the Haunt Is', 'Scaring is Caring; All Night Plight', new Date("2022-06-25T10:00:00-05:00"), new Date("2022-07-02T10:00:00-05:00")],
-  ['Scaring is Caring; All Night Plight', 'The Jig is Up/Molly Vs. The Ghost World', new Date("2022-07-02T10:00:00-05:00"), new Date("2022-07-09T10:00:00-05:00")],
+  ['The Jig is Up/Molly Vs. The Ghost World', '???', new Date("2022-07-02T10:00:00-05:00")]
 ];
 var startDate = new Date("2022-06-18T10:00:00-05:00");
 var today = Date.now();
@@ -124,10 +122,11 @@ function timer(updown, zeroTime, id){
 var hiatusList = [
 ['Last Episode','Next Episode','Preceding Release','Following Release','Hiatus Length','Note'],
 ['Festival of Lights; Saving Christmas','Ice Princess; Ready, Set, Snow','Nov 27 2021','Feb 12 2022',97,''],
-['Scare Tactics; The Bad Boy Bobby Daniels','Citizen McGee; The Internship','Mar 12 2022','Jun 11 2022',91,'']
+['Scare Tactics; The Bad Boy Bobby Daniels','Citizen McGee; The Internship','Mar 12 2022','Jun 11 2022',91,''],
+['The Jig is Up/Molly Vs. The Ghost World','???','Jul 02 2022','???',,'']
 ];
 
-/* function hiatusRankCheck(){
+ function hiatusRankCheck(){
   var diffDays = timer("up", latestRelease, "count");
   var hiatusRank = 0;
   var nextHiatusLength = hiatusList[1][4]; //reference to the longest hiatus
@@ -162,12 +161,12 @@ var hiatusList = [
   document.getElementById("nextHiatusLength").innerHTML =  nextHiatusLength;
   var nextHiatusLengthDate = new Date(latestRelease.getTime() + (nextHiatusLength * 86400000));
   return nextHiatusLengthDate;
-} */
+} 
 
 //makes an HTML table from the array
 function createTable(array) {
   var diffDays = timer("up", latestRelease, "count");
-  //array[array.length - 1][4] = diffDays + " days and counting"; //comment out when not on hiatus
+  array[array.length - 1][4] = diffDays + " days and counting"; //comment out when not on hiatus
   for(var i = 0; i < array.length ; i++){
     var row = document.createElement('tr');
     row.setAttribute("id", "myTr" + i);
@@ -184,7 +183,7 @@ function createTable(array) {
 //does the ticking
 window.setInterval(function(){
   timer("up", latestRelease, "count");
-  //timer("down", hiatusRankCheck(), "count2"); //comment out when not on hiatus
+  timer("down", hiatusRankCheck(), "count2"); //comment out when not on hiatus
   timer("up", lastHiatusMention, "count3");
   timer("down", nextRelease, "count4");
 }, 250);
