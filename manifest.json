@@ -1,0 +1,22 @@
+{
+  "short_name": "TGAMM Hiatus",
+  "name": "TGAMM Hiatus Tracker",
+  "icons": [
+    {
+      "src": "images/192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "https://xman2156.github.io/TGAMM/",
+  "background_color": "#FFDE00",
+  "display": "standalone",
+  "scope": "/TGAMM/",
+  "theme_color": "#FFDE00",
+  "description": "Track the length of The Ghost and Molly McGee hiatus"
+}
